@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Jumbotron} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import AppBar from 'material-ui/AppBar';
 import * as actionCreators from './../../Redux/action_creators';
 import './App.css';
 import CampFilterList from './../CampFilterList';
@@ -11,19 +11,17 @@ export class CampFilterApp extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <Jumbotron>
-          <h1>Parking Space</h1>
-        </Jumbotron>
-        <br></br>
-        <CampFilterList {...this.props}/>
-        <br></br>
+      <div className="appContainer">
+        <AppBar
+          title="Parking Space"
+          iconClassNameRight="muidocs-icon-navigation-expand-more"
+        />
+        <CampFilterList {...this.props} />
         <CampMapContainer {...this.props} />
-        <br></br>
-        <CampList {...this.props}/>
-
+        <CampList {...this.props} />
       </div>
-  )};
+    )
+  };
 }
 
 function mapStateToProps(state) {
@@ -38,4 +36,4 @@ function mapStateToProps(state) {
 }
 
 
-export const CampFilterAppContainer = connect(mapStateToProps,actionCreators)(CampFilterApp);
+export const CampFilterAppContainer = connect(mapStateToProps, actionCreators)(CampFilterApp);

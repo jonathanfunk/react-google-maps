@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class CampMap extends React.Component {
+export default class ParkingMap extends React.Component {
 
   renderChildren() {
     const {children} = this.props;

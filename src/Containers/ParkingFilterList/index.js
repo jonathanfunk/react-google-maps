@@ -1,9 +1,9 @@
 import React from 'react';
-import CampFilter from './../../Components/CampFilter'
+import ParkingFilter from './../../Components/ParkingFilter'
 import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
 
 
-export default class CampFilterList extends React.Component {
+export default class ParkingFilterList extends React.Component {
 
   render() {
     return (
@@ -16,7 +16,7 @@ export default class CampFilterList extends React.Component {
             justifyContent: 'space-between',
           }}>
           {this.props.filters.map(item =>
-            <CampFilter
+            <ParkingFilter
               id={item.get('id')}
               key={item.get('id')}
               changeFilter={this.props.changeFilter}

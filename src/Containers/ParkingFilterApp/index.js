@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import AppBar from 'material-ui/AppBar';
 import * as actionCreators from './../../Redux/action_creators';
 import './App.css';
-import CampFilterList from './../CampFilterList';
-import CampList from './../CampList';
-import CampMapContainer from './../CampMapContainer';
+import ParkingFilterList from './../ParkingFilterList';
+import ParkingList from './../ParkingList';
+import MapContainer from './../MapContainer';
 
-export class CampFilterApp extends React.Component {
+export class ParkingFilterApp extends React.Component {
 
   render() {
     return (
@@ -16,9 +16,9 @@ export class CampFilterApp extends React.Component {
           title="Parking Space"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
-        <CampFilterList {...this.props} />
-        <CampMapContainer {...this.props} />
-        <CampList {...this.props} />
+        <ParkingFilterList {...this.props} />
+        <MapContainer {...this.props} />
+        <ParkingList {...this.props} />
       </div>
     )
   };
@@ -36,4 +36,4 @@ function mapStateToProps(state) {
 }
 
 
-export const CampFilterAppContainer = connect(mapStateToProps, actionCreators)(CampFilterApp);
+export const ParkingFilterAppContainer = connect(mapStateToProps, actionCreators)(ParkingFilterApp);

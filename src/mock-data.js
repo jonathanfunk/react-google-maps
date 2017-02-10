@@ -11,7 +11,7 @@ export const features = [{
     "water": true,
     "description": "Flush toilet, Shower",
     "title": "Mazama",
-    "image": "mazama.jpg",
+    "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "url": "http://www.craterlakelodges.com/lodging/mazama-village-campground/",
     "marker-size": "small"
   }
@@ -29,7 +29,7 @@ export const features = [{
     "description": "Flush toilet",
     "title": "Lost Creek",
     "url": "http://www.nps.gov/crla/planyourvisit/campgrounds.htm",
-    "image": "lostcreek.jpg",
+    "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
   }
 }, {
@@ -46,7 +46,7 @@ export const features = [{
     "description": "Vault toilet",
     "title": "Huckleberry Mountain",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/ohv/recarea/?recid=69764&actid=29",
-    "image": "huckleberry.jpg",
+    "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
   }
 }, {
@@ -63,7 +63,7 @@ export const features = [{
     "description": "Vault toilet",
     "title": "Natural Bridge -USFS",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/null/recarea/?recid=69828&actid=29",
-    "image": "naturalbridge.jpg",
+    "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
   }
 }, {
@@ -80,7 +80,7 @@ export const features = [{
     "description": "Vault toilet",
     "title": "Scott Creek",
     "url": "https://www.fs.usda.gov/recarea/fremont-winema/recreation/recarea/?recid=59719&actid=31",
-    "image": "scottcreek.jpg",
+    "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
   }
 }, {
@@ -97,7 +97,7 @@ export const features = [{
     "description": "Vault toilet",
     "title": "Union Creek",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/recarea/?recid=69922",
-    "image": "unioncreek.jpg",
+    "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
   }
 }, {
@@ -114,7 +114,7 @@ export const features = [{
     "description": "",
     "title": "Farewell Bend Campground",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/null/recarea/?recid=69720&actid=29",
-    "image": "farewellbend.jpg",
+    "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
   }
 }]

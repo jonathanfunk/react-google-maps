@@ -13,41 +13,55 @@ export default class ParkingMap extends React.Component {
      });
    })
   }
+  
+  onSubmit(e) {
+    e.preventDefault();
+  }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.google !== this.props.google) {
       this.loadMap();
-      this.forceUpdate()
+      this.forceUpdate();
    }
   }
 
   // called after the component renders
   loadMap() {
+    const {google} = this.props;
+    const map = google.maps;
     if (this.props && this.props.google) {
-      // google is available\
-      const {google} = this.props;
-      const maps = google.maps;
-
-    // since the component has already rendered we can grab
-    // a ref to the map div so we can properly load the map
-    // this is not super react-ish, since ideally React alone
-    // touches the DOM
       const mapRef = this.refs.map;
       const node = ReactDOM.findDOMNode(mapRef);
+      let autocomplete = new google.maps.places.Autocomplete(node);
+      autocomplete.bindTo('bounds', map);
+
+      autocomplete.addListener('place_changed', () => {
+      const place = autocomplete.getPlace();
+      if (!place.geometry) {
+        return;
+      }
+
+      if (place.geometry.viewport) {
+        map.fitBounds(place.geometry.viewport);
+      } else {
+        const center =  map.setCenter(place.geometry.location);
+        const zoom =  map.setZoom(17);
+      }
+    })
+
+      //Old stuff
       let zoom = 10;
       let lat = 42.9456;
       let lng = -122.2;
-      const center = new maps.LatLng(lat, lng);
+      const center = new map.LatLng(lat, lng);
       const mapConfig = Object.assign({}, {
         center: center,
         zoom: zoom
       })
 
-      this.map = new maps.Map(node, mapConfig);
+      this.map = new map.Map(node, mapConfig);
     }
-
-  //
-  }
+}
 
   render() {
     const style = {
@@ -56,6 +70,15 @@ export default class ParkingMap extends React.Component {
     }
     return (
       <div>
+      <form onSubmit={this.onSubmit}>
+            <input
+              ref='map'
+              type="text"
+              placeholder="Enter a location" />
+            <input
+              type='submit'
+              value='Go' />
+          </form>
         <div style={style} ref='map'>
           {this.renderChildren()}
           Loading map...

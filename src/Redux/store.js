@@ -1,8 +1,9 @@
 import {createStore} from 'redux';
 import { features } from './../mock-data'//Temporary!!!
 import reducer from './reducer'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-export const store = createStore(reducer)
+export const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 // convert json into dict for use by the React components
 // add mapOn variable to indicate if the marker should be visible
@@ -19,7 +20,6 @@ function get_campgrounds(features) {
       'image': feature['properties']['image'],
       'url': feature['properties']['url'],
       'mapOn': true
-
     })
   });
   return campgrounds

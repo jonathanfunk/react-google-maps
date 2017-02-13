@@ -7,15 +7,14 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
+    height: '100%',
   },
   gridList: {
     display: 'flex',
     flexWrap: 'nowrap',
     overflowX: 'auto',
     padding: '20px',
-  },
-  titleStyle: {
-    color: 'rgb(0, 188, 212)',
+    height: '100%',
   },
 };
 
@@ -28,7 +27,7 @@ export default class ParkingList extends React.Component {
   render() {
     return (
       <div style={styles.root}>
-        <GridList style={styles.gridList} cols={2.2}>
+        <GridList style={styles.gridList}>
           {this.getParkingLot().map(item =>
             <ParkingListItem {...this.props}
               key={item.get('title')}

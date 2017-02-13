@@ -4,7 +4,6 @@ import GoogleApiComponent from './../../Components/GoogleApiComponent'
 import ParkingMap from './../../Components/ParkingMap'
 import {Marker} from './../../Components/Marker'
 import {InfoWindow} from './../../Components/InfoWindow'
-import {SearchBox} from './../../Components/SearchBox'
 
 export class MapContainer extends React.Component {
   render() {

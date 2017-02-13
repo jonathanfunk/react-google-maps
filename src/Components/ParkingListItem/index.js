@@ -1,7 +1,17 @@
 import React from 'react';
-import { GridTile } from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+import { Card } from 'material-ui/Card';
+
+const styles = {
+  card: {
+    width: '500px',
+    minHeight: '100%',
+    padding: '20px',
+    margin: '20px',
+  },
+  img: {
+    width: '100%',
+  }
+}
 
 export default class ParkingListItem extends React.Component {
   componentDidUpdate(prevProps, prevState) {
@@ -29,22 +39,18 @@ export default class ParkingListItem extends React.Component {
   }
 
   render() {
-    let latlng_str = parseFloat(this.props.position.first()).toFixed(3) + "," + parseFloat(this.props.position.last()).toFixed(3)
-    let maps_url = "http://www.google.com/maps?q=" + latlng_str
     return (
-      <GridTile
-        actionIcon={<IconButton><StarBorder color="rgb(0, 188, 212)" /></IconButton>}
-        titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
-        title={this.props.title}
+      <Card
+        ref="cg_image" 
+        style={styles.card}
       >
         <img 
           src={this.props.image} 
           alt="Parkingground" 
-          ref="cg_image" 
-          style={{ width: 200, height: 100 }} 
+          style={styles.img} 
           onClick={() => this.props.onMarkerClick(this.getMarker(this.props.title))}>
         </img>
-      </GridTile>
+      </Card>
     )
   }
 }

@@ -2,7 +2,7 @@ export const features = [{
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-122.166149, 42.865508]
+    "coordinates": [-123.1382246, 49.2634011]
   },
   "properties": {
     "flush": true,
@@ -10,7 +10,7 @@ export const features = [{
     "pets": true,
     "water": true,
     "description": "Flush toilet, Shower",
-    "title": "Mazama",
+    "title": "Red Academy",
     "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "url": "http://www.craterlakelodges.com/lodging/mazama-village-campground/",
     "marker-size": "small"
@@ -19,7 +19,7 @@ export const features = [{
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-122.037881, 42.879145]
+    "coordinates": [-123.10831740000003, 49.2819163]
   },
   "properties": {
     "flush": true,
@@ -27,7 +27,7 @@ export const features = [{
     "pets": false,
     "water":true,
     "description": "Flush toilet",
-    "title": "Lost Creek",
+    "title": "Lighthouse Labs",
     "url": "http://www.nps.gov/crla/planyourvisit/campgrounds.htm",
     "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
@@ -36,7 +36,7 @@ export const features = [{
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-122.337174, 42.877807]
+    "coordinates": [-123.00452000000001, 49.251514]
   },
   "properties": {
     "flush": false,
@@ -44,7 +44,7 @@ export const features = [{
     "pets": true,
     "water": false,
     "description": "Vault toilet",
-    "title": "Huckleberry Mountain",
+    "title": "BCIT",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/recreation/ohv/recarea/?recid=69764&actid=29",
     "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
@@ -53,7 +53,7 @@ export const features = [{
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-122.463867, 42.889648]
+    "coordinates": [-123.10945889999999, 49.2821089]
   },
   "properties": {
     "flush": false,
@@ -61,7 +61,7 @@ export const features = [{
     "pets": true,
     "water": false,
     "description": "Vault toilet",
-    "title": "Natural Bridge -USFS",
+    "title": "Vancouver Film School",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/null/recarea/?recid=69828&actid=29",
     "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
@@ -70,7 +70,7 @@ export const features = [{
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-121.924772, 42.884588]
+    "coordinates": [-123.24599390000003, 49.26060520000001]
   },
   "properties": {
     "flush": false,
@@ -78,7 +78,7 @@ export const features = [{
     "pets": true,
     "water": true,
     "description": "Vault toilet",
-    "title": "Scott Creek",
+    "title": "UBC",
     "url": "https://www.fs.usda.gov/recarea/fremont-winema/recreation/recarea/?recid=59719&actid=31",
     "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
@@ -87,7 +87,7 @@ export const features = [{
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-122.45, 42.9102777778]
+    "coordinates": [-123.04461370000001, 49.2600893]
   },
   "properties": {
     "flush": false,
@@ -95,7 +95,7 @@ export const features = [{
     "pets": true,
     "water": true,
     "description": "Vault toilet",
-    "title": "Union Creek",
+    "title": "The Art Institute of Vancouver",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/recarea/?recid=69922",
     "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"
@@ -104,7 +104,7 @@ export const features = [{
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-122.4353305556, 42.9162388889]
+    "coordinates": [49.2841672, -123.11462460000001]
   },
   "properties": {
     "flush": false,
@@ -112,7 +112,7 @@ export const features = [{
     "pets": false,
     "water": true,
     "description": "",
-    "title": "Farewell Bend Campground",
+    "title": "VCAD",
     "url": "https://www.fs.usda.gov/recarea/rogue-siskiyou/null/recarea/?recid=69720&actid=29",
     "image": "http://www.ghettoredhot.com/wp-content/uploads/2014/10/walmart-parking-lot.jpg",
     "marker-size": "small"

@@ -25,40 +25,20 @@ export default class ParkingMap extends React.Component {
    }
   }
 
-  // called after the component renders
   loadMap() {
     const {google} = this.props;
     const map = google.maps;
     if (this.props && this.props.google) {
       const mapRef = this.refs.map;
       const node = ReactDOM.findDOMNode(mapRef);
-      let autocomplete = new google.maps.places.Autocomplete(node);
-      autocomplete.bindTo('bounds', map);
-
-      autocomplete.addListener('place_changed', () => {
-      const place = autocomplete.getPlace();
-      if (!place.geometry) {
-        return;
-      }
-
-      if (place.geometry.viewport) {
-        map.fitBounds(place.geometry.viewport);
-      } else {
-        const center =  map.setCenter(place.geometry.location);
-        const zoom =  map.setZoom(17);
-      }
-    })
-
-      //Old stuff
-      let zoom = 10;
-      let lat = 42.9456;
-      let lng = -122.2;
+      let zoom = 11;
+      let lat = 49.2827291;
+      let lng = -123.12073750000002;
       const center = new map.LatLng(lat, lng);
       const mapConfig = Object.assign({}, {
         center: center,
         zoom: zoom
       })
-
       this.map = new map.Map(node, mapConfig);
     }
 }
@@ -69,21 +49,10 @@ export default class ParkingMap extends React.Component {
       minHeight: '400px'
     }
     return (
-      <div>
-      <form onSubmit={this.onSubmit}>
-            <input
-              ref='map'
-              type="text"
-              placeholder="Enter a location" />
-            <input
-              type='submit'
-              value='Go' />
-          </form>
         <div style={style} ref='map'>
           {this.renderChildren()}
           Loading map...
         </div>
-      </div>
     )
   }
 }

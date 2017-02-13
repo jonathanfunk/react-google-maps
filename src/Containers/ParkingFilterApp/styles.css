@@ -3,4 +3,7 @@
   height: 100vh;
   overflow: hidden;
 }
+.mapListContainer {
+  height: 100%;
+}
 

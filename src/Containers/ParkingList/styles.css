@@ -1,0 +1,6 @@
+.root {
+    display: flex;
+    flexWrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+  }

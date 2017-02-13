@@ -1,16 +1,14 @@
 import React from 'react';
 import { Card } from 'material-ui/Card';
+import RaisedButton from 'material-ui/RaisedButton';
+import './styles.css';
 
 const styles = {
   card: {
     width: '500px',
     minHeight: '100%',
-    padding: '20px',
-    margin: '20px',
+    margin: '10px',
   },
-  img: {
-    width: '100%',
-  }
 }
 
 export default class ParkingListItem extends React.Component {
@@ -18,10 +16,10 @@ export default class ParkingListItem extends React.Component {
     if (this.props.activeMarker !== prevProps.activeMarker) {
       let img_ref = this.refs.cg_image
       if (this.props.showingInfoWindow && (this.props.selectedTitle === this.props.title)) {
-        img_ref.style.border = "3px solid black"
+        img_ref.style.backgroundColor = '#E8E8E8'
       }
       else {
-        img_ref.style.border = null
+        img_ref.style.backgroundColor = 'white'
       }
     }
   }
@@ -41,16 +39,20 @@ export default class ParkingListItem extends React.Component {
   render() {
     return (
       <Card
-        ref="cg_image" 
         style={styles.card}
-      >
-        <img 
-          src={this.props.image} 
-          alt="Parkingground" 
-          style={styles.img} 
-          onClick={() => this.props.onMarkerClick(this.getMarker(this.props.title))}>
-        </img>
-      </Card>
+        onClick={() => this.props.onMarkerClick(this.getMarker(this.props.title))}
+      > 
+        <div className="listImage">
+          <img src={this.props.image} alt={this.props.title}>
+          </img>
+        </div>
+        <div className="listDetails" ref="cg_image">  
+          <p>$100</p>
+          <h2>{this.props.title}</h2>
+          <p>{this.props.description}</p>
+          <RaisedButton label="Book" primary={true} />
+        </div>
+      </Card >
     )
   }
 }

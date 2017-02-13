@@ -1,0 +1,13 @@
+.listImage {
+    height: 200px;
+    overflow: hidden;
+}
+
+.listDetails {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+}

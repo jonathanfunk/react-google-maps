@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AppBar from 'material-ui/AppBar';
 import * as actionCreators from './../../Redux/action_creators';
-import './App.css';
+import './styles.css';
 import ParkingFilterList from './../ParkingFilterList';
 import ParkingList from './../ParkingList';
 import MapContainer from './../MapContainer';
@@ -17,8 +17,10 @@ export class ParkingFilterApp extends React.Component {
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
         <ParkingFilterList {...this.props} />
+        <div className="mapListContainer">
         <MapContainer {...this.props} />
         <ParkingList {...this.props} />
+        </div>
       </div>
     )
   };
